@@ -55,7 +55,9 @@ def get_price(page_url,oder_num):
                     lot_list.append(int(lot))
                     price_list.append(int(price))
                 isMorethan = list()
+                morethan_lot = 1
                 for i in range(len(lot_list_html)-1):
+                    
                     if oder_num >= lot_list[-1]:
                         morethan_lot = lot_list[-1]
                     elif lot_list[i] <= oder_num and oder_num < lot_list[i+1]:
